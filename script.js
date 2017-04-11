@@ -13,10 +13,38 @@ var employees = [atticus, jem, boo, scout, robert, mayella];
 
 for (var i = 0; i < employees.length; i++) {
   console.log(employees[i]);
+  // call function calcNewBonusArray
+  // log the result ie the return of the function
+  console.log(calcNewBonusArray(employees[i]));
 }
 
+// console.log(calcNewBonusArray(atticus));
+
 // function that takes single employee array and returns new array
-function newArray(singleEmployee) {
+function calcNewBonusArray(singleEmployee) {
+  console.log('in calcNewBonusArray singleEmployee ->', singleEmployee);
+
+  var empRating = singleEmployee[3];
+
+  var bonusPercentage = 0;
+
+  // determine base bonus using emp rating
+  switch (empRating) {
+    case 2:
+      bonusPercentage = 0.0;
+      break;
+    case 3:
+      bonusPercentage = 0.04;
+      break;
+    default:
+  }
+
+  // adjust based on empNum
+
+  // adjust based on salary
+
+  // check that they are not above a percentage
+
   // contain name, bonus percentage, adjustedComp, bonus
   var newEmpArray = [];
 
